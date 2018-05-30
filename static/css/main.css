@@ -1,0 +1,753 @@
+/* GLOBAL */
+body{
+	overflow-x: hidden;
+}
+
+/* Login (sign_in.php) */
+
+#loginParticles {
+    background: #2980b9;
+    height: 100vh;
+}
+
+.particles-js-canvas-el {
+    height: 99.5% !important;
+}
+
+.loginForm {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 384px;
+    height: 300px;
+    margin: auto !important;
+}
+
+.loginForm input {
+    width: 384px;
+    border: none;
+    border-bottom: 2px solid #b8b6c1;
+    transition: all .3s ease-in-out;
+    position: relative;
+    height: 48px;
+    padding: 0 9px !important;
+    color: #b8b6c1;
+}
+
+.loginForm input:focus {
+    border-bottom: 2px solid #2ecc71;
+    color: #2ecc71;
+    outline: none;
+}
+
+.loginForm label {
+    font-size: 10px;
+    color: #b8b6c1;
+}
+
+.loginLeft {
+    z-index: 1;
+    box-shadow: 1px 0 12px 0 #2c3e50;
+}
+
+.loginButton {
+    width: 100px;
+    height: 38px;
+    background-color: #2ecc71;
+    border: none;
+    color: white;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    border-radius: 50px;
+    float: right;
+    position: relative;
+    top: 30px;
+}
+
+.loginButton:hover {
+    opacity: 0.9;
+    outline: none;
+}
+
+.loginButton:focus, .loginButton:active {
+    outline: none;
+}
+
+.loginRight{
+	padding: 0;
+}
+
+.row{
+	margin: 0;
+}
+
+@media screen and (min-width: 1350px){
+	.loginLeft{
+		flex: 0 0 33.33% !important;
+		max-width: 33.33% !important;
+	}
+
+	.loginRight{
+		flex: 0 0 66.66% !important;
+		max-width: 66.66% !important;
+	}
+}
+
+@media screen and (min-width: 768px){
+	.loginLeft{
+		flex: 0 0 55%;
+		max-width: 55%;
+	}
+
+	.loginRight{
+		flex: 0 0 45%;
+		max-width: 45%;
+	}
+}
+
+@media screen and (max-width: 767px){
+	.loginRight{
+		width: 0;
+	}
+}
+
+
+
+/* Teacher's Page (class.php) */
+
+.leftPanel{
+	height: 100%;
+	border-right: solid 1px rgba(0,0,0,.1);
+	padding: 0;
+	z-index: 1000;
+}
+
+.lightHR{
+	border-color:rgba(0,0,0,.1);
+}
+
+.menuUl{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+}
+
+.menuUl .list-group-item{
+	border: solid 1px transparent;
+	border-radius: 0;
+	transition: all .5s;
+}
+
+.menuFa{
+	transition: all .2s;
+}
+
+.div-fa{
+	display: inline-block;
+	width: 70px;
+	text-align: center;
+	color:#34495e;
+}
+
+.txt-li{
+	transition: .2s all;
+}
+
+.menuUl .list-group-item:hover{
+	background: #4dadf7;
+	border-left: solid 10px #2980b9;
+	cursor: pointer;
+}
+
+.menuElActive{
+	background: #c9e6fd;
+	border-left: solid 5px #4dadf7 !important;
+	padding-left: 19px;
+}
+
+.menuUl  .list-group-item:hover > .div-fa{
+	color: white;
+}
+
+.menuUl .list-group-item:hover > .txt-li{
+	color: white;
+}
+
+.marksTable{
+	position: absolute;
+	top: 170px;
+	width: 100%;
+    padding-right: 65px;
+}
+
+#studentList{
+	width: 100%;
+	z-index: -1000;
+	transition: 1s all;
+	padding: 15px;
+}
+
+.menu_logo{
+	display: block;
+	padding-left: 20px;
+	padding-top: 10px;
+	margin-bottom: 10px;
+}
+
+.menu_logo .menu_ico{
+	float:right;
+	margin-right: 25px;
+	margin-top: 8px;
+}
+
+.menu_logo .cloud_ico{
+	color: #3498db;
+}
+
+.menu_logo .menu_txt{
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 20px;
+	/* TODO: Make it in a line with the icon */
+}
+
+.select_object{
+	padding-top: 10px;
+	padding-bottom: 14px;
+}
+
+.select_object_multi{
+	padding-top: 10px;
+	padding-bottom: 14px;
+}
+
+.select_object .custom-select{
+	width: 100%;
+}
+
+.card-st-name{
+	font-size: 20px;
+	margin-top: -5px;
+	display: inline-block;
+}
+
+.usrMarksData{
+	margin-bottom: 5px;
+	background: white;
+	transition: all .5s;
+}
+
+.usrMarksData:hover{
+	cursor: pointer;
+	background: rgba(52, 152, 219,.1);
+}
+
+.usrMarksData .badge{
+	font-size: 16px;
+}
+
+.rightPanel{
+	background: rgba(52, 152, 219,.05);
+	padding: 0;
+	overflow: scroll;
+    overflow-x: hidden;
+}
+
+.panelHeader{
+	background: white;
+	box-shadow: 0px 2px 5px -2.5px rgba(0,0,0,0.5);
+}
+
+.infobar_marks{
+	padding: 25px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.infobar_marks .infobar_text{
+	font-size: 28px;
+	color: #34495e;
+}
+
+.infobar_marks .marks_num{
+	font-size: 16px;
+	color: gray;
+	margin-left: 10px;
+}
+
+.infobar_abs{
+	padding: 25px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.infobar_abs .infobar_text{
+	font-size: 28px;
+	color: #34495e;
+}
+
+.infobar_abs .abs_num{
+	font-size: 16px;
+	color: gray;
+	margin-left: 10px;
+}
+
+.infobar_marks .class_avg{
+	float:right;
+}
+
+.class_avg_badge{
+	font-size: 14px;
+	padding: 12px;
+}
+
+.backButton{
+	display: none;
+	float: right;
+	margin-right: 5px;
+}
+
+.backButtonSt{
+	display: inline-block;
+}
+
+.li_el{
+	display: block;
+	font-family: 'Open Sans';
+}
+
+.li_date{
+	text-align: center;
+}
+
+.li_mark{
+	float: left;
+	margin-right: -38px;
+}
+
+.addMarkButton{
+	background-clip: padding-box;
+	background-color: #27ae60;
+	transition: .5s all;
+}
+
+.addMarkButton:hover{
+	background-color: #2ecc71;
+}
+
+.addAbsButton{
+	background-clip: padding-box;
+	background-color: #27ae60;
+	transition: .5s all;
+}
+
+.addAbsButton:hover{
+	background-color: #2ecc71;
+}
+
+.infobar_marks .stModList{
+	float:right;
+	display: none;
+    font-size: 21px;
+    margin-left: 5px;
+}
+
+.infobar_marks .stModList:hover{
+	cursor: pointer;
+}
+
+/* Switches */
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {display:none;}
+  
+  /* The slider */
+  .slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+  }
+  
+  .slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+  }
+  
+  input:checked + .slider {
+	background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+	box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+	border-radius: 34px;
+  }
+  
+  .slider.round:before {
+	border-radius: 50%;
+  }
+.cardPersonal {
+    padding-right: 0;
+    padding-left: 0;
+    max-width: calc(33.333333% - 20px);
+    margin-left: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: box-shadow 3s cubic-bezier(.25,.8,.25,1);
+    min-width: 348px;
+}
+
+.cardPersonal:hover {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.23);
+    cursor: pointer;
+}
+
+.cardBodyLeft {
+    float: left;
+    padding-right: 5px;
+}
+
+.cardImagine {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.cardImagine span {
+    color: white;
+    line-height: 70px;
+    font-size: 28px;
+    position: relative;
+}
+
+.cardName span {
+    position: relative;
+    left: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+.cardInfo span {
+    position: relative;
+    left: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    color: #b4b9bc;
+}
+
+.cardInfo > span:nth-child(2) {
+    position: relative;
+    left: 30px;
+}
+
+@media (max-width: 768px){
+    .cardPersonal {
+        max-width: 100%;
+        margin-left: 0;
+	}
+}
+
+.hamburger {
+	float: right;
+	position: relative;
+	top: 6px;
+	right: 10px;
+}
+
+.hamburger .line {
+	width: 25px;
+	height: 2px;
+	background-color: #34495e;
+	display: none;
+	margin: 5px auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover {
+	cursor: pointer;
+}
+  
+
+  
+#hamburger-1.is-active .line:nth-child(1) {
+	-webkit-transform: translateX(6px) translateY(19px) rotate(-45deg);
+	-ms-transform: translateX(6px) translateY(19px) rotate(-45deg);
+	-o-transform: translateX(6px) translateY(19px) rotate(-45deg);
+	transform: translateX(6px) translateY(19px) rotate(-45deg);
+	width: 19px;
+}
+
+#hamburger-1.is-active .line:nth-child(2) {
+	-webkit-transform: translateY(5px) rotate(90deg);
+	-ms-transform: translateY(5px) rotate(90deg);
+	-o-transform: translateY(5px) rotate(90deg);
+	transform: translateY(5px) rotate(90deg);
+}
+
+
+#hamburger-1.is-active .line:nth-child(3) {
+	-webkit-transform: translateX(-6px) translateY(5px) rotate(45deg);
+	-ms-transform: translateX(-6px) translateY(5px) rotate(45deg);
+	-o-transform: translateX(-6px) translateY(5px) rotate(45deg);
+	transform: translateX(-6px) translateY(5px) rotate(45deg);
+	width: 19px;
+}
+
+@media (max-width: 1155px){
+    .hamburger .line {
+		display: block;
+	}
+
+	.hamburger {
+		float: left;
+		position: relative;
+		left: 15px;
+		z-index: 999 !important;
+	}
+
+	.menu_logo,.menuUl {
+		display: none;
+	}
+
+	.menuUl {
+		position: absolute;
+		z-index: 5;
+		width: 276px;
+		top: 35px;
+	}
+}
+
+@media (min-width: 1155px){
+	.menuUl {
+		display: block !important;
+	}
+}
+
+@media (max-width: 767px){
+    .menuUl {
+		width: 100% !important;
+		position: absolute;
+		top: 50px;
+	}
+
+	.hamburger {
+		position: absolute;
+		margin: 0 auto;
+	}
+
+	.leftPanel, .teacherRow {
+		height: 37px !important;
+	}
+
+	.panelHeader {
+		position: relative;
+		top: 20px;
+	}
+
+	#subM {
+		position: relative;
+		top: 8px;
+	}
+}
+
+.li_stat{
+	float:right;
+	margin-top: -27px;
+}
+
+.li_stat .badge{
+	font-size: 20px;
+	margin-right: 10px;
+}
+
+.li_btns{
+	float:right;
+	margin-top: -30px;
+	font-size: 14px;
+}
+
+.li_btns .delete_btn{
+	margin-right: 5px;
+	font-size: inherit;
+}
+
+.li_btns .edit_btn{
+	font-size: inherit;
+}
+
+.logout:hover{
+	background: #e74c3c !important;
+	border-left: solid 10px #c0392b !important;
+}
+
+#multiForm label{
+	display: flex;
+	font-family: 'Open Sans', sans-serif;
+	margin-right: 30px;
+    margin-top: 8px;
+}
+
+.inline{ 
+	display: inline-block;
+}
+
+.middle{
+	text-align: center;
+    display: block;
+    margin-left: 20px;
+}
+
+.stMulti{
+	margin-bottom: 10px;
+	margin-top: 8px;
+	display: block;
+}
+
+.multiLabel{
+	font-size: 20px;
+    font-family: 'Open Sans';
+}
+
+.hidden{
+	display: none;
+}
+
+.misc_list a{
+	text-decoration: none !important;
+	color: #2c3e50;
+}
+
+/* regusr/main.php */
+.misc_students_list{
+	margin-top: 25px;
+}
+
+.misc_students_list .student_data{
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* PACE Settings */
+
+.pace{
+	background-color: rgba(0,0,0,0.5) !important;
+}
+
+.pace-activity{
+	height: 50px !important;
+	width: 50px !important;
+}
+
+/* Student's Page settings */
+#objectList{
+	width: 100%;
+	z-index: -1000;
+	transition: 1s all;
+	padding: 15px;
+}
+
+.usr_avg_badge{
+	font-size: 16px;
+	padding: 11px;
+}
+
+.modMarksTable{
+	top: 100px !important;
+}
+
+/* Admin Page */
+.col-md-6 .topText{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	display: block;
+	margin-bottom: 10px;
+}
+
+.list-group .listBtnsAdd{
+	text-align: center;
+	color: white;
+	transition: all .5s;
+	background-color: #2ecc71;
+}
+
+.list-group .listBtnsAdd:hover{
+	cursor: pointer;
+	background-color: #27ae60;
+}
+
+.delObject{
+	float:right;
+	padding: 12px;
+    margin: -12px;
+    margin-right: -20px;
+	background: #e74c3c;
+	color:white;
+	border-radius: 2px;
+	transition: all .5s;
+}
+
+.delObject:hover{
+	background-color: #c0392b;
+	cursor: pointer;
+}
+
+.fullBtn{
+	width: 100%;
+}
+
+#sandbox .regUsrButtons{
+	text-align:center;
+	width: 100%;
+	transition: all .5s;
+	color: white;
+}
+#sandbox .regUsrButtons:hover{
+	cursor: pointer;
+}
+#sandbox #regUsrShowButton{
+	background-color: #3498db; 
+}
+
+#sandbox #regUsrRegButton{
+	background-color: #2ecc71; 
+}
+
+#sandbox #regUsrShowButton:hover{
+	background-color: #2980b9;
+}
+
+#sandbox #regUsrRegButton:hover{
+	background-color: #27ae60;
+}
