@@ -7,6 +7,8 @@ The main features are:
 * Intuitive design
 * Compatible with clasic CPANEL hostings
 
+![alt text](https://github.com/dragomirt/gradebook/raw/master/static/marks.png "Adding Marks")
+
 ### Prerequisites
 To run this application on a server, it will need to have installed:
 
